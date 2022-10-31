@@ -9,14 +9,15 @@ What I've found:
 - when using autoloader, include the source of your file in the composer.json file. Make sure the root is in the src directory
   - Example would be:
 
-```php
+```json
 "autoload": {
   "psr-4": {
-  "Oreilly\\ModernPHP\\": "src/"
+  "vendorName\\rootNameSpace\\": "src/"
     }
 }
 ```
 
+- After that, run `composer dump-autoload` to create the autoloader
 - use `require vendor/autoload.php` when using autoloader.
 - to avoid writing require every single file, use .htaccess to automate this.
 
